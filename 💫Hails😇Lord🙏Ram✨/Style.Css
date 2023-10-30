@@ -1,0 +1,122 @@
+/* Base styles for all screen sizes */
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #f2f2f2;
+    font-family: "Acme";
+    background: #000;
+}
+
+.container {
+    max-width: 62.5rem;
+    margin: 6.25rem auto;
+    display: flex;
+    flex-wrap:  wrap;
+    justify-content: space-around;
+}
+
+.Jay {
+    position: relative;
+    margin: 1.25rem 0;
+    width: 18.75rem;
+    height: 25rem;
+    background: #fff;
+    transform-style: preserve-3d;
+    transform: perspective(2000px);
+    transition: 1s;
+}
+
+.Jay .img-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    transform-origin: left;
+    z-index: 1;
+    transition: 1s;
+}
+
+.Jay .img-container img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.Jay .Ram-details {
+    position: absolute;
+    left: 0;
+    top: 0;
+    box-sizing: border-box;
+    padding: 0.2rem;
+    color: #000;
+}
+
+.Jay .Ram-details h2 {
+    margin: 0;
+    padding: 0.5em 0;
+    text-transform: uppercase;
+    font-size: 2em;
+    color: #ed363a;
+}
+
+.Jay .Ram-details p {
+    margin: 0;
+    padding: 0;
+    line-height: 25px;
+    font-size: 1.1em;
+}
+.Jay:hover:nth-child(2) {
+    box-shadow: 10px 10px 50px rgb(15, 55, 231);
+}
+
+.Jay:hover {
+    z-index: 1111;
+    transform: perspective(2000px) rotate(-10deg);
+    box-shadow: 10px 10px 50px rgb(223, 62, 17);
+}
+
+.Jay .img-container:hover {
+    transform: rotateY(-135deg);
+}
+.Support {
+    display: flex;
+    justify-content: center;
+}
+.Support {
+    font-family: cursive;
+    color: orangered;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
+    text-shadow: 0 0 50px red;
+}
+
+svg {
+    height: 2.875rem;
+    width: 3.25rem;
+}
+a.svg {
+    text-decoration: none;
+}
+
+/* Responsive styles for tablets and mobile devices */
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .Jay {
+        width: 100%;
+        margin: 1rem 0;
+    }
+}
+
+/* Add more media queries and styles as needed for specific screen sizes */
+
